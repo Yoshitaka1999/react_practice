@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>React Practice</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        (() => {
+
+            function Counter(props) {
+                return <div>0 {props.color}</div>;
+            }
+
+            ReactDOM.render(
+                <div>
+                 <Counter color="tomato"/>
+                 <Counter/>
+                 <Counter/>
+                </div>,
+                document.getElementById('root')
+            );
+        })();
+    </script>
+</body>
+</html>
